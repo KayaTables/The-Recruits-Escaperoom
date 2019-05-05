@@ -1,0 +1,5 @@
+Notities onderzoek op locatie woerden
+
+	•	Er zijn meerdere knoppen die de schuifdeur laten openen en sluiten. De knoppen verbinden twee draden. Als die draden verbonden zijn gaat de deur open of dicht. (Test nog wat de stroom is)
+	•	Magneten vermoedelijk 24 volt. Op de begane grond is er een die lijkt op die in de escape room maar net iets anders is. Die is 24 volt DC 1,5 Watt dus 62,5 mA. Kan met beefy transistor of gewoon relais. Let wel op dat de stroom door de spoel onvoorspelbaar kan zijn als een materiaal gemagnetiseerd wordt of er een kracht uitgeoefend word op gemagnetiseerd materiaal.
+	•	De bestaande dradenboel is zo ingewikkeld dat het waarschijnlijk sneller is om nieuwe aansluitingen te maken voor de aan te passen magneetsloten. Overstappen naar enable-bare schakelende voeding mogelijk ipv huidige voeding-relais combinatie. (Goedgekeurd door Michiel)

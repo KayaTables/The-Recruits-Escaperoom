@@ -1,0 +1,14 @@
+Lasersysteem:
+
+Een zichtbare laser gebruiken heeft twee nadelen, maar het moet wel. Namelijk dat je precies moet richten en dat je geen TSOP module kan gebruiken.
+Maar het hoeft niet echt! je kunt de laser gebruiken voor het visuele effect en daar dan naast een 38kHz gemoduleerde IR led. TSOP module er tegenover en je hebt een werkend systeem. als de laser onderbroken wordt wordt de IR-TSOP verbinding ook verbroken
+
+
+
+Door host instellen maar niet door gebruiker:
+Een kleine afstandsbediening met 38 kHz IR led en een ontvanger. Ziet er cool uit voor zowel host als speler, gaat eindeloos mee met een CR2032 en de speler raakt niet in de war door een (door hun) ongebruikt slot etc
+
+
+
+Computerpuzzel voor de kluizen:
+Raspberry Pi?

@@ -1,0 +1,219 @@
+
+<!-- saved from url=(0037)http://www.picbasic.nl/home_boven.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--  
+
+
+
+O P G E L E T !
+
+B I J   U P L O A D E N   V A N   D E Z E   P A G I N A   M O E T   D E   E L E C T R O   K N O P   U I T G E S C H A K E L D   W O R D E N !
+
+
+-->
+
+<script language="javascript"><!--
+  if (parent.location.href == self.location.href){window.location.href = 'index.htm'}
+
+  window.status = "Wees creatief en maak iets origineels met elektronica en PIC's."
+
+  function vorige() 
+  {history.go(-1);}
+//--></script>
+
+<meta http-equiv="Content-Language" content="nl">
+
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=2.0)">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="Keywords" content="picbasic,Locamation,Pelgrim,CBU,840804,D7508C,T65,W65,Ericsson,Philips telefoon,heemaf,rijen,dtmf,pulse-to-tone,picbasic cursus,programmeercursus,programmeer cursus,pic cursus,picbasic compiler,pic basic,proton basic,proton+,proton plus,proton compiler,frits kieftenbelt,frits kieftenbeld,projecten,project,projects,picmicro,pic,micro controller,microcontroller,crownhill,printen etsen, etsen van printplaten,home automation,huis automatisering">
+<title>PIC projecten en programmeren in PIC Basic</title>
+<!--<base target="onder">--><base href="." target="onder">
+
+<link rel="shortcut icon" type="image/x-icon" href="http://www.picbasic.nl/favicon.ico">
+</head>
+
+<body bgcolor="#800000" text="#FFFFFF" link="#FF9933" vlink="#C0C0C0" alink="#C0C0C0" marginwidth="12" marginheight="0">
+
+<div align="center">
+  <center>
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td width="27" height="36">
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td><img border="0" src="./vlagje_nl.gif" title="Nederlands is geactiveerd" width="28" height="20"></td>                    
+          <td><a onfocus="this.blur()" href="http://www.picbasic.nl/indexes_uk.htm" onmouseover="document[&#39;KnopVlagUK&#39;].imgRolln=document[&#39;KnopVlagUK&#39;].src;
+                         document[&#39;KnopVlagUK&#39;].src     =document[&#39;KnopVlagUK&#39;].lowsrc;" onmouseout="document[&#39;KnopVlagUK&#39;].src     =document[&#39;KnopVlagUK&#39;].imgRolln" target="_top"> 
+            <img border="0" src="./vlagje_uk.gif" name="KnopVlagUK" lowsrc="images/vlagjeh_uk.gif" title="Click on this UK flag for English language" hspace="6" width="28" height="20"></a></td>
+        </tr>
+      </tbody></table>
+    </td>
+    <td align="center" width="100%">
+      <table border="0" cellpadding="2" cellspacing="0">
+        <tbody><tr>
+          <td><img border="0" src="./picbasicprojecten.gif" width="477" height="22"></td>
+          <td width="37"></td>
+          <td><a onfocus="this.blur()" href="http://www.picbasic.nl/websiteinfo.htm#laatstetoevoegingen" onmouseover="document[&#39;KnopFrits&#39;].imgRolln=document[&#39;KnopFrits&#39;].src;
+                         document[&#39;KnopFrits&#39;].src     =document[&#39;KnopFrits&#39;].lowsrc;" onmouseout="document[&#39;KnopFrits&#39;].src     =document[&#39;KnopFrits&#39;].imgRolln" target="_top"> 
+            <img border="0" src="./fritskraalte.gif" name="KnopFrits" lowsrc="images/fritskraalte_h.gif" title="Klik hier voor website-info en update overzicht" width="51" height="24"></a></td>
+        </tr>
+      </tbody></table>
+    </td>
+    <td width="64" nowrap="" align="right">
+
+    
+    
+    <!-- BIJ UPLOADEN VAN DEZE PAGINA EERST DE ELECTRO KNOP UITSCHAKELEN -->
+    
+    <!-- JAAR HIER INVULLEN: 2019 -->
+    
+    <script language="javascript"><!--
+      var geluid1
+      var geluid2
+      var seizoen
+      var datum=new Date()
+      var maand=datum.getMonth() + 1
+      var dag  =datum.getDate()
+
+      if (maand==1 & dag<7)
+        {seizoen="seizoen_new-year.gif"
+        tekst="Gelukkig nieuwjaar!"}
+      else if (maand==2 & dag==14)
+        {seizoen="seizoen_valentijn.gif"
+        tekst="Valentijnsdag!"}
+      else if (maand==2 & dag>7 & dag<12)
+        {seizoen="aa_seizoen_carnaval.gif"  // aa_ !!!
+        tekst="Carnaval!"}
+      else if (maand==3 & dag==20)
+        {seizoen="seizoen_lente.gif"        // 20=2017...2020
+        tekst="Het is lente!"}
+      else if (maand==4 & dag==1)
+        {seizoen="seizoen_1april.gif"
+        tekst="Het is 2 april! (1 april)"}
+      else if (maand==4 & dag>20 & dag<23)
+        {seizoen="aa_seizoen_pasen.gif"     // aa_ !!!
+        tekst="Vrolijk Pasen!"}
+      else if (maand==4 & dag==27)
+        {seizoen="seizoen_vlag-nl.gif"
+        tekst="Koningsdag"}
+      else if (maand==5 & dag==12)
+        {seizoen="aa_seizoen_moederdag.gif" // aa_ !!!
+        tekst="Moederdag!"}
+      else if ((maand==5 & dag==9) | (maand==5 & dag==10))
+        {seizoen="aa_seizoen_pinksteren.gif" // aa_ !!!
+        tekst="Pinksterweekend, kom ribs eten met blues muziek in Raalte!"}
+      else if (maand==6 & dag==16)
+        {seizoen="aa_seizoen_vaderdag.gif"  // aa_ !!!
+        tekst="Vaderdag!"}
+      else if (maand==6 & dag==21)
+        {seizoen="seizoen_zomer.gif"        // 21=2017...2019 / 20=2020
+        tekst="Het is zomer!"}
+      else if ((maand==8 & dag>27 & dag<32) | (maand==9 & dag==1))
+        {seizoen="aa_seizoen_stoppelhaene.gif"  // aa_ !!!
+        tekst="St&ouml;ppelhaene feestweek in Raalte!"}
+      else if (maand==9 & dag==23)
+        {seizoen="seizoen_herfst.gif"        // 23=2018...2019 / 22=2020
+        tekst="Het is herfst!"}
+      else if (maand==10 & dag==4)
+        {seizoen="seizoen_dierendag.gif"
+        tekst="Werelddierendag"}
+      else if (maand==10 & dag==31)
+        {seizoen="seizoen_halloween.gif"
+        tekst="Halloween"}
+      else if (maand==11 & dag==11)
+        {seizoen="aa_seizoen_carnaval.gif"
+        tekst="11-11 = carnaval!"}
+      else if (maand==12 & dag<6)
+        {seizoen="seizoen_sinterklaas.gif"
+        tekst="Sinterklaas"}
+      else if (maand==12 & dag==21)
+        {seizoen="seizoen_winter.gif"        // 21=2017...2020 (2019 = 22)
+        tekst="Het is winter!"}
+      else if (maand==12 & dag>21 & dag<27)
+        {seizoen="seizoen_kerst.gif"
+        tekst="Vrolijk Kerstfeest!"}
+      else if (maand==12 & dag==31)
+        {seizoen="seizoen_vuurpijl.gif"
+        tekst="Oudjaar"}
+      else
+        {seizoen="aa_seizoen.gif"
+        tekst="PIC Basic"}
+        
+      if (seizoen=="aa_seizoen_pinksteren.gif")
+        {document.write('<a href="http://www.ribsenblues.nl" target="_blank"><img border="0" src="images/'+seizoen+'" title="'+tekst+'" alt="Pinksteren" width="45" height="36"></a>')}
+      else if (seizoen=="aa_seizoen_stoppelhaene.gif")
+        {document.write('<a href="http://www.stoppelhaene.nl" target="_blank"><img border="0" src="images/'+seizoen+'" title="'+tekst+'" alt="Stoppelhaene" width="45" height="36"></a>')}
+      else
+        {document.write('<img border="0" src="images/'+seizoen+'" title="'+tekst+'" alt="PIC Basic" width="45" height="36">')}
+
+      
+    //--></script><img border="0" src="./aa_seizoen.gif" title="PIC Basic" alt="PIC Basic" width="45" height="36"></td>
+  </tr>
+</tbody></table>
+  </center>
+</div>
+
+
+<!--  if (maand==1 & dag<7)
+        {geluid1="ohmsweetohm-newyear.mp3"
+         geluid2="ohmsweetohm-newyear.ogg"}
+      else if (maand==12 & dag>21 & dag<27)
+        {geluid1="ohmsweetohm-kerst.mp3"
+         geluid2="ohmsweetohm-kerst.ogg"}
+      else
+        {geluid1="ohmsweetohm.mp3"
+         geluid2="ohmsweetohm.ogg"}
+
+      document.write('<audio autoplay><source src="downloads/'+geluid1+'" type="audio/mpeg"><source src="downloads/'+geluid2+'" type="audio/ogg"></audio>')  -->
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td background="./knop_notenhout.gif" width="50%" title="Ohm Sweet Ohm: Back to Basic met www.picbasic.nl"></td>
+
+    <td><a onfocus="this.blur()" href="http://www.picbasic.nl/home_onder.htm" onmouseover="document[&#39;KnopHome&#39;].imgRolln=document[&#39;KnopHome&#39;].src;
+                    document[&#39;KnopHome&#39;].src     =document[&#39;KnopHome&#39;].lowsrc;" onmouseout="document[&#39;KnopHome&#39;].src     =document[&#39;KnopHome&#39;].imgRolln"> 
+       <img border="0" src="./knop_l_home.gif" name="KnopHome" lowsrc="images/knop_k_home.gif" alt="Home" title="Home" width="114" height="28"></a><br>
+    
+    </td><td><a onfocus="this.blur()" href="http://www.picbasic.nl/projecten.htm" onmouseover="document[&#39;KnopProjecten&#39;].imgRolln=document[&#39;KnopProjecten&#39;].src;
+                    document[&#39;KnopProjecten&#39;].src     =document[&#39;KnopProjecten&#39;].lowsrc;" onmouseout="document[&#39;KnopProjecten&#39;].src     =document[&#39;KnopProjecten&#39;].imgRolln"> 
+       <img border="0" src="./knop_l_projecten.gif" name="KnopProjecten" lowsrc="images/knop_k_projecten.gif" alt="Projecten" title="Projecten" width="114" height="28"></a><br>
+
+   </td><td><a onfocus="this.blur()" href="http://www.picbasic.nl/picbasic.htm" onmouseover="document[&#39;KnopPicBasic&#39;].imgRolln=document[&#39;KnopPicBasic&#39;].src;
+                    document[&#39;KnopPicBasic&#39;].src     =document[&#39;KnopPicBasic&#39;].lowsrc;" onmouseout="document[&#39;KnopPicBasic&#39;].src     =document[&#39;KnopPicBasic&#39;].imgRolln"> 
+       <img border="0" src="./knop_l_picbasic.gif" name="KnopPicBasic" lowsrc="images/knop_k_picbasic.gif" alt="Pic Basic" title="Pic Basic" width="114" height="28"></a><br>
+    
+    </td><td><img border="0" src="./knop_no_electro.gif" alt="Electro" title="Electro voorlopig alleen beschikbaar op de CD-ROM van picbasic.nl" width="114" height="28"></td> 
+                
+<!--  'onmousedown' is waarschijnlijk geen officiele, door alle browsers ondersteunde instructie -->
+<!--     <td><a onfocus="this.blur()" href="electro.htm"
+       onmouseover="document['KnopElectro'].imgRolln=document['KnopElectro'].src;
+                    document['KnopElectro'].src     =document['KnopElectro'].lowsrc;"
+       onmousedown="document['KnopElectro'].src     =document['KnopElectro'].knopksrc;"
+       onmouseout ="document['KnopElectro'].src     =document['KnopElectro'].imgRolln;">
+       <img border="0" src="images/knop_l_electro.gif" name="KnopElectro"
+            lowsrc="images/knop_h_electro.gif" knopksrc="images/knop_k_electro.gif" alt="Electro" title="Electro" width="114" height="28"></a><br> -->
+
+
+    <td><a onfocus="this.blur()" href="http://www.picbasic.nl/informatie.htm" onmouseover="document[&#39;KnopInfo&#39;].imgRolln=document[&#39;KnopInfo&#39;].src;
+                    document[&#39;KnopInfo&#39;].src     =document[&#39;KnopInfo&#39;].lowsrc;" onmouseout="document[&#39;KnopInfo&#39;].src     =document[&#39;KnopInfo&#39;].imgRolln"> 
+       <img border="0" src="./knop_l_info.gif" name="KnopInfo" lowsrc="images/knop_k_info.gif" alt="Info" title="Zoeken en informatie" width="114" height="28"></a><br>
+
+    </td><td><a onfocus="this.blur()" href="http://www.picbasic.nl/contact.htm" onmouseover="document[&#39;KnopContact&#39;].imgRolln=document[&#39;KnopContact&#39;].src;
+                    document[&#39;KnopContact&#39;].src     =document[&#39;KnopContact&#39;].lowsrc;" onmouseout="document[&#39;KnopContact&#39;].src     =document[&#39;KnopContact&#39;].imgRolln"> 
+       <img border="0" src="./knop_l_contact.gif" name="KnopContact" lowsrc="images/knop_k_contact.gif" alt="Contact" title="Contact" width="48" height="28"></a><br>
+
+    </td><td background="./knop_notenhout.gif" width="50%" title="PIC Basic, om programma&#39;s voor PICmicro&#39;s te schrijven op een makkelijker manier">
+    </td>
+    
+    <td><a onfocus="this.blur()" onmouseover="document[&#39;KnopTerug&#39;].imgRolln=document[&#39;KnopTerug&#39;].src;
+                    document[&#39;KnopTerug&#39;].src     =document[&#39;KnopTerug&#39;].lowsrc;" onmouseup="document[&#39;KnopTerug&#39;].src     =document[&#39;KnopTerug&#39;].lowsrc; vorige();" onmouseout="document[&#39;KnopTerug&#39;].src     =document[&#39;KnopTerug&#39;].imgRolln;">
+       <img border="0" src="./knop_l_terug.gif" name="KnopTerug" lowsrc="images/knop_k_terug.gif" alt="Terug" title="Terug" width="44" height="28"></a></td>
+  </tr>
+</tbody></table>
+
+
+
+
+</body></html>

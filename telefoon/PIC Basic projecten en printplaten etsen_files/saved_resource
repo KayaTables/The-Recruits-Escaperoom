@@ -1,0 +1,32 @@
+<html>
+
+<head>
+
+<script><!--
+  if (window!=top) {top.location.href=location.href;}
+//--></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>PIC Basic projecten en printplaten etsen</title>
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="Keywords" content="picbasic,Locamation,Pelgrim,CBU,840804,D7508C,RC5,RC5X,RC6,RC6A,picbasic compiler,pic basic,proton basic,proton+,proton plus,proton compiler,frits kieftenbelt,frits kieftenbeld,projecten,project,projects,picmicro,pic,micro controller,microcontroller,crownhill,printen etsen, etsen van printplaten,home automation,huis automatisering">
+<meta name="Description" content="Met o.a. Nederlandstalige PIC programmeercursus voor beginners">
+<meta name="Author" content="Frits Kieftenbelt (Frizie)">
+<meta name="Robots" content="All">
+<meta name="Language" content="nl">
+<link rel="stylesheet" type="text/css" href="./">
+<link rel="shortcut icon" href="/images/favicon.ico">
+</head>
+
+<frameset framespacing="0" border="0" rows="75,*" frameborder="0">
+  <frame name="boven" src="home_boven.htm" scrolling="no" noresize marginwidth="12" marginheight="0" target="onder">
+  <frame name="onder" src="home_onder.htm" target="_self" scrolling="auto">
+  <noframes>
+  <body>
+  <p>Op deze pagina worden frames gebruikt, maar uw browser ondersteunt geen frames.<br>
+     This page uses frames, but your browser doesn't support frames.</p>
+  </body>
+  </noframes>
+</frameset>
+
+</html>

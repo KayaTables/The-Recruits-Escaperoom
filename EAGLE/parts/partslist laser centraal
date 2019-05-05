@@ -1,0 +1,76 @@
+Partlist
+
+Exported from Laser Centraal.brd at 07/04/2019 10:11
+
+EAGLE Version 9.3.2 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part       Value                              Package                Library                                      Position (mm)         Orientation
+
+C1         10u                                C0805K                 rcl                                          (1.27 27.94)          R270
+C2         100n                               C0805                  rcl                                          (22.352 22.86)        MR180
+C3         4u7                                C0805                  resistor                                     (33.782 9.652)        R180
+C6         100n                               C0805                  rcl                                          (49.276 2.54)         R0
+C7         4u7                                C0805                  rcl                                          (34.036 3.556)        R270
+C8         4u7                                C0805                  rcl                                          (55.118 28.194)       R270
+C9         100nF                              C0805                  rcl                                          (57.15 28.194)        R270
+C10        1uF                                C0805                  rcl                                          (36.068 3.556)        R270
+C11        1uF                                C0805                  rcl                                          (43.434 22.606)       R180
+C12        20p                                C0805                  rcl                                          (38.354 13.208)       R270
+C13        20p                                C0805                  rcl                                          (38.354 17.272)       R90
+C14        100nF                              C0805                  rcl                                          (60.706 13.462)       R90
+C15        100nF                              C0805                  rcl                                          (43.434 24.638)       R180
+D1         BAT60J                             SOD323_ST              diode                                        (29.972 24.13)        R180
+D2         BAT60J                             SOD323_ST              diode                                        (29.972 21.59)        R180
+D3         BAT60J                             SOD323_ST              diode                                        (29.972 19.05)        R180
+D4         BAT60J                             SOD323_ST              diode                                        (29.972 16.51)        R180
+D5         BAT60J                             SOD323_ST              diode                                        (29.972 12.7)         R180
+D6         BAT60J                             SOD323_ST              diode                                        (29.972 10.16)        R180
+D7         BAT60J                             SOD323_ST              diode                                        (29.972 7.62)         R180
+D8         BAT60J                             SOD323_ST              diode                                        (29.972 5.08)         R180
+D15        orange                             CHIP-LED0805           led                                          (71.12 26.416)        R0
+D16        orange                             CHIP-LED0805           led                                          (71.12 17.526)        R180
+D17        red                                CHIP-LED0805           led                                          (71.12 8.636)         R180
+D18        BAT60J                             SOD323_ST              diode                                        (58.928 28.194)       R90
+DATA                                          FE08-2                 header                                       (13.97 13.97)         R90
+GND        LSP10                              LSP10                  solpad                                       (-2.286 31.75)        R0
+IC1        LMV324M                            SO14                   linear                                       (22.352 19.812)       R270
+IC2        LMV324M                            SO14                   linear                                       (22.352 8.89)         R270
+IC3        74LVC1G14DBV                       SOT23-5                74xx-little-de                               (34.29 15.24)         R0
+IC6        ATMEGA328P-AU                      TQFP32-08              Arduino-ucs&SoCs                             (50.292 8.89)         R270
+IC7        FT232RL                            SSOP28                 ftdichip                                     (50.8 20.32)          R90
+INGANG     BRIGHTTSA061G100-250_SWITCH        BRIGHTTSA061G100-250   switch BRIGHT TSA061G100-250lbr              (63.5 33.02)          R0
+J4                                            2X03                   Connettori                                   (41.91 4.826)         R270
+MINI-USB-B MINI_USB_B-KRHRO-SELECU-M-M5DS-W-4 KRHROSELECU-M-M5DS-W-4 mini USB B Korean Hroparts Elec U-M-M5DS-W-4 (48.768 26.67)        R180
+POWER                                         FE08-2                 header                                       (3.556 13.97)         R90
+Q1                                            HC49U70                crystal                                      (42.164 15.24)        R90
+R1         1k                                 R0805                  rcl                                          (33.782 11.684)       R0
+R2         1k                                 R0805                  rcl                                          (33.782 7.62)         R0
+R3         100k                               R0805                  rcl                                          (8.89 22.86)          R0
+R4         100k                               R0805                  rcl                                          (8.89 20.32)          R0
+R5         100k                               R0805                  rcl                                          (8.89 17.78)          R0
+R6         100k                               R0805                  rcl                                          (8.89 15.24)          R0
+R7         100k                               R0805                  rcl                                          (8.89 12.7)           R0
+R8         100k                               R0805                  rcl                                          (8.89 10.16)          R0
+R9         100k                               R0805                  rcl                                          (8.89 7.62)           R0
+R10        100k                               R0805                  rcl                                          (8.89 5.08)           R0
+R11        100k                               R0805                  rcl                                          (8.89 22.86)          MR180
+R12        100k                               R0805                  rcl                                          (8.89 20.32)          MR180
+R13        100k                               R0805                  rcl                                          (8.89 17.78)          MR180
+R14        100k                               R0805                  rcl                                          (8.89 15.24)          MR180
+R15        100k                               R0805                  rcl                                          (8.89 12.7)           MR180
+R16        100k                               R0805                  rcl                                          (8.89 10.16)          MR180
+R17        100k                               R0805                  rcl                                          (8.89 7.62)           MR180
+R18        100k                               R0805                  rcl                                          (8.89 5.08)           MR180
+R21        100                                R0805                  rcl                                          (73.152 13.462)       R270
+R24        1k                                 R0805                  rcl                                          (71.12 13.462)        R270
+R25        1k                                 R0805                  rcl                                          (71.12 4.572)         R270
+R26        1k                                 R0805                  rcl                                          (71.12 30.734)        R90
+R27        1k                                 R0805                  rcl                                          (58.674 13.462)       R90
+R28        1k                                 R0805                  rcl                                          (56.642 13.462)       R90
+R29        1k                                 R0805                  rcl                                          (38.1 3.556)          R90
+RESET      BRIGHTTSA061G100-250_SWITCH        BRIGHTTSA061G100-250   switch BRIGHT TSA061G100-250lbr              (72.39 24.13)         R0
+STOP       BRIGHTTSA061G100-250_SWITCH        BRIGHTTSA061G100-250   switch BRIGHT TSA061G100-250lbr              (72.39 33.02)         R0
+UITGANG    BRIGHTTSA061G100-250_SWITCH        BRIGHTTSA061G100-250   switch BRIGHT TSA061G100-250lbr              (63.5 24.13)          R0
+VCC        LSP10                              LSP10                  solpad                                       (-2.286 27.94)        R0

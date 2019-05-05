@@ -1,0 +1,3 @@
+Hier wordt uitgelegd hoe je je raspberry pi read only maakt
+https://www.raspberrypi.org/blog/adafruits-read-only/
+

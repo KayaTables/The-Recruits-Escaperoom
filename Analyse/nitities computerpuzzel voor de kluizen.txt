@@ -1,0 +1,4 @@
+achteraf duidelijk documenteren hoe het werkt (linkje naar de wiki van de distro)
+
+Het wordt een raspberry pi met een distro er op die amnesiac is (non-persistent). Hij is dan zo gemaakt dat on first startup alles zo is zoals voor het spel nodig is. als de speler iets verpest of als er nieuwe spelers komen hoeft de raspberry pi alleen opnieuw opgestart te worden om te zorgen dat alles weer is zoals het hoort.
+

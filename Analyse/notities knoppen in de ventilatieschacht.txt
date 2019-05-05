@@ -1,0 +1,14 @@
+Eisen
+•	Er is een ventilatieschacht waar acht knoppen in moeten komen. 
+•	Als alle knoppen tegelijk ingedrukt worden gaan twee magneetsloten los.
+•	Deze magneetsloten moeten vanuit de control room aan en uit te zetten zijn.
+
+Volgens mij zijn deze knoppen al aanwezig. Alle knoppen kunnen in serie, dan is het circuit compleet als ze allemaal ingedrukt zijn. Vervolgens iets met een latch om het magneetslot aan en uit te zetten en dan ook knoppen in de control room
+
+dus: 
+Latch set is magneet aan
+latch reset is magneet uit
+latch ingangen pull-down
+speler knoppen in serie. knoppen trekken reset omhoog
+reset knop in de control room parralel aan speler knoppen (trekt reset omhoog)
+set knop in de control room trekt set omhoog

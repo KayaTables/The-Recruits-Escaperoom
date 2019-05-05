@@ -1,0 +1,167 @@
+
+<!-- saved from url=(0039)http://www.picbasic.nl/t65-telefoon.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script language="javascript"><!--
+  if (parent.location.href == self.location.href){window.location.href = 'frameload.htm?' + self.location;}
+//--></script>
+
+<style type="text/css">
+  body {scrollbar-3dlight-color:#CC0000;
+        scrollbar-arrow-color:#FFFFFF;
+        scrollbar-base-color:#800000;
+        scrollbar-track-color:#800000;
+        scrollbar-darkshadow-color:#CC0000;
+        scrollbar-face-color:#CC0000;
+        scrollbar-highlight-color:#FFFFFF;
+        scrollbar-shadow-color:#FFFFFF}
+</style>
+
+<meta http-equiv="Content-Language" content="nl">
+
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Bellen met de oude T65 telefoontoestel via glasvezelmodem of kabelmodem</title>
+<style fprolloverstyle="">A:hover {color: #FFCC66}</style>
+</head>
+
+<body background="./achtergrond.gif" text="#FFFFFF" link="#FF9933" vlink="#C0C0C0" alink="#C0C0C0" style="font-family: Arial" onload="focus()">
+
+<h2>T65, W65, Ericsson en Heemaf telefoon genereert DTMF tonen</h2>
+
+<h3>Extra informatie over de 141101 pulse to tone converter van picbasic.nl</h3>
+
+<p>Hieronder extra informatie over de 141101.<br>
+Het artikel van de <a href="http://www.picbasic.nl/dtmf-telefoon.htm"> 141101 puls naar toon omzetter</a> (pulse to tone converter) zelf is <a href="http://www.picbasic.nl/dtmf-telefoon.htm"> hier</a> te vinden.</p>
+
+<hr width="30%">
+
+<p><b>Korte beschrijving standaard T65 telefoontoestel</b></p>
+
+<p><i>Situatie 1: Er wordt gebeld.</i><br>
+Door een vrij hoge spanning (tot soms wel 160V) over telefoonlijn <b>a</b> en <b>b</b> gaat de bel rinkelen.<br>
+Als de hoorn wordt opgenomen schakelen wisselcontacten HC<font face="Courier New"><sup>I</sup></font> en 
+HC<font face="Courier New"><sup>II</sup></font> om en wordt de bel afgekoppeld.<br>
+Tevens is er nu verbinding met de luidspreker en microfoon in de hoorn.<br>
+De trafo van de luidspreker heeft een grappige functie.<br>
+Doordat de microfoon met twee identieke wikkelingen (1-2 en 3-4) in tegenfase zijn verbonden 
+wordt het ontvangen geluid wél doorgegeven aan de luidspreker in de hoorn, 
+maar het geluid van de eigen microfoon (vrijwel) níet, waardoor je je zelf nauwelijks terughoort.<br>
+Diode D1 (in sommige toestellen ook D2) beschermt het luisterend oor tegen hoge storingspieken op de lijn.</p>
+
+<p><img border="0" src="./schema_t65b-telefoon.gif" width="550" height="367"><br>
+<i>Schema T65 telefoon in originele staat, getekend in rust met hoorn op de haak.</i></p>
+
+<p>&nbsp;<br>
+<i>Situatie 2: Iemand opbellen.</i><br>
+De hoorn wordt van de haak genomen waardoor de telefoonbel wordt afgekoppeld en de hoorn en kiesschijf met de telefoonlijn worden verbonden.<br>
+Door aan de kiesschijf te draaien wordt eerst S2 gesloten waardoor een kortsluiting ontstaat.<br>
+S2 heeft een dubbelfunctie, niet alleen zorgt deze voor de lijnkortsluiting als aan de kiesschijf wordt gedraaid, 
+maar tevens overbrugt hij de luidspreker en microfoon, 
+waardoor de telpulsen van S1 tijdens het terugdraaien van de kiesschijf niet hoorbaar zijn door de luidspreker.</p>
+
+<p><img border="0" src="./telefoonhoorn.gif" align="right" hspace="5" width="93" height="93">
+S1 en S2 zitten in de kiesschijfbehuizing waarbij S1 in rust is gesloten en S2 geopend (zoals het schema is getekend).<br>
+Wordt er nu aan de kiesschijf gedraaid dan sluit S2 zich meteen en opent pas weer als de kiesschijf helemaal terug in de ruststand is.<br>
+Wanneer er dus een cijfer wordt gedraaid wordt S2 gesloten, maar is S1 ook nog steeds gesloten, een kortsluiting over lijn <b>a</b> en <b>b</b> dus.<br>
+Alleen bij het (vanzelf) terugdraaien van de kiesschijf opent S1 zich een aantal maal, afhankelijk van het gedraaide cijfer.<br>
+Is bijvoorbeeld cijfer 9 gedraaid, dan wordt S1 negen maal geopend tijdens het vanzelf terugdraaien van de kiesschijf.<br>
+Wordt cijfer 0 gedraaid, dan volgen er geen 0, maar 10 pulsjes.<br>
+Nadat de kiesschijf helemaal is teruggedraaid opent S2 zich weer en kan er (eventueel) een verbinding worden gemaakt.</p>
+
+<p>Condensator C1 heeft een dubbel functie.<br>
+In rust staat deze in serie met de telefoonbel.<br>
+Als nu de hoorn van de haak wordt genomen dan wordt de telefoonbel afgekoppeld en komt C1 nu als RC combinatie (met R1) over S1 
+(de telpulsschakelaar van de kiesschijf) als vonkenblusser te staan om de levensduur van de contacten van S1 te verlengen.</p>
+
+<p>&nbsp;<br>
+<i>AT = Aardings Toets</i><br>
+De aardingstoets krijgt in dit project de functie van herhaaltoets.</p>
+
+<p>&nbsp;<br>
+<i>EB = Extra Bel</i><br>
+Over aansluitingen 3 en 4 kan een extra telefoonbel worden geplaatst (in serie met de bel van de telefoon zelf dus).<br>
+Wordt hier geen gebruik van gemaakt dan moet aansluiting 3 met 4 worden doorverbonden, anders doet de telefoonbel zelf het niet.<br>
+Dus even controleren of deze verbinding in de telefoon is gemaakt<b>!</b></p>
+
+<hr size="5" color="#FF0000">
+
+<p><a name="print"><b>De vernieuwde T65</b></a><br>
+Als de kleine 141101-B print in de T65-telefoon is ingebouwd en aangesloten, dan genereert de kiesschijf DTMF tonen en dus geen pulsen meer.<br>
+Het printje is smal en kan in het vak van de telefoon liggen waar de aansluitpunten zich bevinden.<br>
+Om ruimte voor een connector op de print te besparen zijn de soepele(<b>!</b>) draden rechtstreeks aan de print gesoldeerd.</p>
+
+<p>De 141101-B print is als compleet gemonteerd en werkend geheel voor <b><i>25 Euro</i></b> verkrijgbaar <a href="http://www.picbasic.nl/dtmf-telefoon.htm#bestellen">(Hier bestellen)</a>.</p>
+
+<hr width="30%">
+
+<p><b>De print aansluiten</b></p>
+
+<p>
+<img border="0" src="./t65_print-aansluiten2.jpg" align="right" width="563" height="375"> 
+<img border="0" src="./t65_kiesschijf.jpg" width="400" height="300"><br>
+<i>De gele en rode draad van de kiesschijf loshalen en verlengen.<br>
+De vrijgekomen aansluitpunten <b>Gl</b> en <b>Rd</b> doorverbinden.</i><br>
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div align="right">
+  <table border="0" cellpadding="0" cellspacing="0" style="float: right" width="400">
+    <tbody><tr>
+      <td width="20" nowrap=""></td>
+      <td><img border="0" src="./t65_print-smd2.gif" width="400" height="299"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="left"><i>De aansluitingen staan ook op de achterzijde van het printje vermeldt.</i><br>&nbsp;
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+
+<p>De groene draad (punt <b>2</b> van de 141101-B print) moet worden verbonden met aansluitpunt <b>2</b> van de T65.<br>
+De korte rode draad (punt <b>6</b> van de 141101-B print) moet worden verbonden met aansluitpunt <b>6</b> van de T65.<br>
+De blauwe draad (punt <b>3</b> van de 141101-B print) moet worden verbonden met aansluitpunt <b>3</b> van de T65, 
+hierop zit ook al de blauwe draad van de telefoonlijn en de gele die naar punt <b>4</b> loopt.</p>
+
+<p>Koppel in de telefoon de gele draad van de kiesschijf los, en verbind deze nu aan de lange gele draad (punt <b>Y</b>     (yellow)) van de 141101-B print (zie foto).<br>
+Koppel in de telefoon de rode draad van de kiesschijf los, en verbind deze nu aan de lange rode draad (punt <b>R)</b> van de 141101-B print.</p>
+
+<p>In de telefoon zelf moeten nu de twee aansluitpunten (<b>Gl</b> en <b>Rd</b>) 
+waar eerst de gele- en rode draad van de kiesschijf mee verbonden zaten nu worden worden doorverbonden, zie het schema bij de rode dikke pijl (of
+bovenstaande foto's).</p>
+
+<p>&nbsp;</p>
+
+<hr width="30%">
+
+<table border="0" cellpadding="0" cellspacing="0" align="left" width="460">
+  <tbody><tr>
+    <td width="450">&nbsp;<br>
+      <img border="0" src="./schema_t65b-dtmf.gif" width="450" height="535"><br>
+      <i>D1, D2, R1, R2 en C1 zitten al op de print van de T65 telefoon zelf.<br> 
+      Om verwarring te voorkomen wordt de componentnummering op de 141101 print voortgezet.<br>
+      &nbsp;</i></td>
+  </tr>
+</tbody></table>
+
+<p>Het 141101-B printje krijgt voeding uit de telefoonlijn (ofwel het kabel- of glasvezelmodem) zodra de hoorn van de haak wordt genomen.<br>
+Er is dus geen externe voeding nodig.</p>
+
+<p>Wanneer de hoorn op de haak ligt krijgt de PIC geen voedingsspanning omdat hoornhaakcontact 
+HC<font face="Courier New"><sup>I</sup></font>  (d-f) dan de verbinding met telefoonlijn <b>a</b> verbroken heeft.<br>
+Alleen de telefoonbel staat dan via C1 over telefoonlijn <b>a</b> en <b>b</b>.<br>
+Zodra de hoorn wordt opgenomen krijgt de PIC spanning en is het mogelijk om iemand op te bellen door óf met de kiesschijf een nummer te draaien, 
+óf door de herhaaltoets (S3, AT) het laatst gedraaide telefoonnummer op te laten bellen.<br clear="all">
+</p>
+
+<hr width="30%">
+
+<p><b>Meer info: zie het <a href="http://www.picbasic.nl/dtmf-telefoon.htm">puls naar toon omzetter</a>  project.</b></p>
+
+<p>&nbsp;</p>
+
+
+
+
+</body></html>

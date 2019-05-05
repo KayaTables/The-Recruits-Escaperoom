@@ -1,0 +1,31 @@
+elke keer on startup een nieuw account maken en automatisch inloggen. in de map /etc/skel/ kun je bestanden zetten die automatisch in de home folder komen.
+
+bij startup moet eerst de oude user verwijderd worden met het userdel command. userdel -r verwijderd ook het home directory van de user.
+
+Maak ook een script op het bureaublad waarmee gereset kan worden. Dit kan simpelweg een reboot script zijn als reboot snel genoeg is. Als het langzaam is kan er simpelweg een read only zipje uitgepakt worden.
+
+Reboot heeft een aantal voordelen, namelijk, de speler kan bij de zip oplossing op reset drukken en dan in paniek op cancel drukken. als het script simpelweg reboot kan er niks verpest worden met die paniek want de speler verliest alle controlls. (hopelijk)
+
+Hier wordt uitgelegd hoe je commands laat uitvoeren tijdens startup
+https://www.raspberrypi.org/documentation/linux/usage/rc-local.md
+
+Ik heb iets slims bedacht: Ik laat on startup de inhoud van de Root home folder kopiëren naar etc/skel. daarna creeer ik de nieuwe user. op die manier kan Marc zelf alle files aanpassen! 
+edit: Je kunt met useradd een custom skel locatie aangeven met -k!
+
+Hier volgt het script (we gaan uit van root en de gebruiker heet Sergey)
+EDIT DIT SCRIPT WERKT NIET MEER zie onder
+
+userdel -r Sergey
+useradd -m -k home/HOOFDGEBRUIKER Sergey #-k zorgt ervoor dat het home directory van de nieuwe user gevuld wordt met de bestanden in de map erna (in dit geval het home directory van HOOFDGEBRUIKER
+passwd -d Sergey #verwijderd het wachtwoord van de nieuwe gebruiker (noodzakelijk voor userinitialisatie)
+
+ik heb ook "CREATE_HOME yes" toegevoegd aan login.defs in /etc/
+
+De raspberry pi mag niet zomaar met een schakelaar uitgeschakeld worden. sluit eerst af
+
+Volgens mij doet de raspberry pi iets raars met het home directory bij useradd waardoor het useradd -m -k script niet werkt. Gelukkig is er cp -r. script volgt:
+
+userdel -r Sergey
+useradd -m Sergey
+passwd -d Sergey #verwijderd het wachtwoord van de nieuwe gebruiker (noodzakelijk voor userinitialisatie)
+cp -r /home/pi/Desktop /home/Sergey/Bureaublad #let op de nederlandse en engelse taal

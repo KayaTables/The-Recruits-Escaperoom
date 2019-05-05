@@ -1,0 +1,12 @@
+Uitzoeken hoe het lasersysteem aangesloten kan worden op de actuatoren
+
+Uitzoeken hoe de magneetsloten werken
+
+Vragen naar budget rookmachine en of ze al een idee hebben welke
+	gaan ze zelf kiezen
+
+Vragen of PCB toetsenbord acceptabel is voor computer met passcode
+	ja, leuk
+
+Overleggen hoe schakelen lasersysteem
+	knoppen in sleutelkast

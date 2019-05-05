@@ -1,0 +1,19 @@
+Partlist
+
+Exported from laser ontvanger.brd at 03/04/2019 20:37
+
+EAGLE Version 9.3.2 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value          Package    Library        Position (mil)        Orientation
+
+C1       4u7            C0805K     rcl            (240 260)             R270
+C2       100n           C0805K     rcl            (xxx xxx)             R270
+GND      LSP10          LSP10      solpad         (460 170)             R0
+IC1      HS0038A2       TSOP17_TB1 HS0038A2       (50 196.85039)        R180
+IC2      74LVC1G14DBV   SOT23-5    74xx-little-de (210 90)              R270
+OUT+     LSP10          LSP10      solpad         (360 70)              R0
+OUT-     LSP10          LSP10      solpad         (460 70)              R0
+R1       100R           R0805      rcl            (160 260)             R270
+VCC      LSP10          LSP10      solpad         (360 170)             R0

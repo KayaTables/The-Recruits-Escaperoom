@@ -1,0 +1,6 @@
+Eisen
+•	De schuifdeur moet openen als er op de knop in het kastje er naast wordt gedrukt. (Dit is al zo)
+•	In de huidige situatie gaat er een alarm af. Dat moet nu niet meer gebeuren
+•	Het alarm moet door de host aangezet worden (zie Vault).
+
+De aansluiting van het alarm moet uitgezocht worden. Vermoedelijk hoeft alleen het draadje van het alarm omgelegd te worden naar de control room. 

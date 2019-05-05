@@ -1,0 +1,1 @@
+Doe alles behalve de dingen met de home folder zodat /home ook read only is

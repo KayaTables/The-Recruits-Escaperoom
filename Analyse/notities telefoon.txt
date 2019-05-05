@@ -1,0 +1,17 @@
+http://www.matilo.eu/technish/oude-telefoon-aansluiten/
+
+https://nl.wikipedia.org/wiki/Telefoonstekker
+
+Deze vooral
+https://gathering.tweakers.net/forum/list_messages/1367377
+
+http://www.picbasic.nl/t65-telefoon.htm
+
+Lijn in rust 40v gelijk tussen A en B
+lijn gebeld 40vgelijk +20v wissel 25hz.
+open lijn 10v gelijk bij gesprek
+open lijn 24v wissel bij kiestoon(niet helemaal zeker)
+Er is zeker wel een + en een - zie bovenstaande.
+bron: https://www.circuitsonline.net/forum/view/39894
+
+je kunt de telefoon meten en een thevenin equivalent maken. vervolgens kun je een voeding ontwerpen

@@ -1,0 +1,1 @@
+Er wordt simpelweg een schakelaar aangesloten op het magneetslot. Er moet uitgezocht worden hoe de magneten werken voor duidelijk is of er een relais nodig is.
