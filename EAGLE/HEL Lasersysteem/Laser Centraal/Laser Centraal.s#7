@@ -17287,10 +17287,10 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
 <part name="D16" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="orange"/>
 <part name="R25" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
-<part name="D17" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="orange"/>
+<part name="D17" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0805" package3d_urn="urn:adsk.eagle:package:15818/2" value="red"/>
 <part name="R26" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uF"/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100n"/>
 <part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nF"/>
 <part name="U$15" library="MyPOW" deviceset="+5V" device=""/>
 <part name="U$21" library="MyPOW" deviceset="VUSB" device=""/>
@@ -17311,7 +17311,6 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="D18" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="BAT60J" device="" package3d_urn="urn:adsk.eagle:package:43461/1"/>
 <part name="U$1" library="MyPOW" deviceset="+5V" device=""/>
 <part name="R29" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
-<part name="5V" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -17347,7 +17346,7 @@ de output van de opamp altijd laag zijn</text>
 ononderbroken zijn. Als er een of meerdere 
 lasers onderbroken zijn gaat het signaal omlaag</text>
 <text x="408.94" y="10.16" size="3.81" layer="94" ratio="10">ICSP</text>
-<text x="303.53" y="-26.67" size="3.81" layer="94" ratio="10">+5V AUTO SELECTOR</text>
+<text x="-110.49" y="97.79" size="3.81" layer="94" ratio="10">+5V AUTO SELECTOR</text>
 </plain>
 <instances>
 <instance part="IC1" gate="A" x="17.78" y="101.6" smashed="yes">
@@ -17572,32 +17571,32 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <instance part="SUPPLY8" gate="GND" x="91.44" y="40.64" smashed="yes">
 <attribute name="VALUE" x="89.535" y="37.465" size="1.778" layer="96"/>
 </instance>
-<instance part="D15" gate="G$1" x="353.06" y="63.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="357.632" y="67.056" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="357.632" y="69.215" size="1.778" layer="96" rot="R180"/>
+<instance part="D15" gate="G$1" x="381" y="66.04" smashed="yes" rot="R90">
+<attribute name="NAME" x="385.572" y="69.596" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="385.572" y="71.755" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R24" gate="G$1" x="365.76" y="63.5" smashed="yes">
-<attribute name="NAME" x="361.95" y="64.9986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="361.95" y="60.198" size="1.778" layer="96"/>
+<instance part="R24" gate="G$1" x="393.7" y="45.72" smashed="yes">
+<attribute name="NAME" x="389.89" y="47.2186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="389.89" y="42.418" size="1.778" layer="96"/>
 </instance>
-<instance part="D16" gate="G$1" x="353.06" y="73.66" smashed="yes" rot="R90">
-<attribute name="NAME" x="357.632" y="77.216" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="357.632" y="79.375" size="1.778" layer="96" rot="R180"/>
+<instance part="D16" gate="G$1" x="381" y="45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="385.572" y="49.276" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="385.572" y="51.435" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R25" gate="G$1" x="365.76" y="73.66" smashed="yes">
-<attribute name="NAME" x="361.95" y="75.1586" size="1.778" layer="95"/>
-<attribute name="VALUE" x="361.95" y="70.358" size="1.778" layer="96"/>
+<instance part="R25" gate="G$1" x="393.7" y="55.88" smashed="yes">
+<attribute name="NAME" x="389.89" y="57.3786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="389.89" y="52.578" size="1.778" layer="96"/>
 </instance>
-<instance part="D17" gate="G$1" x="353.06" y="83.82" smashed="yes" rot="R90">
-<attribute name="NAME" x="357.632" y="87.376" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="357.632" y="89.535" size="1.778" layer="96" rot="R180"/>
+<instance part="D17" gate="G$1" x="381" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="385.572" y="59.436" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="385.572" y="61.595" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R26" gate="G$1" x="365.76" y="83.82" smashed="yes">
-<attribute name="NAME" x="361.95" y="85.3186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="361.95" y="80.518" size="1.778" layer="96"/>
+<instance part="R26" gate="G$1" x="393.7" y="66.04" smashed="yes">
+<attribute name="NAME" x="389.89" y="67.5386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="389.89" y="62.738" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY9" gate="GND" x="373.38" y="58.42" smashed="yes">
-<attribute name="VALUE" x="371.475" y="55.245" size="1.778" layer="96"/>
+<instance part="SUPPLY9" gate="GND" x="401.32" y="40.64" smashed="yes">
+<attribute name="VALUE" x="399.415" y="37.465" size="1.778" layer="96"/>
 </instance>
 <instance part="C6" gate="G$1" x="254" y="45.72" smashed="yes">
 <attribute name="NAME" x="255.524" y="46.101" size="1.778" layer="95"/>
@@ -17607,11 +17606,11 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <attribute name="NAME" x="486.664" y="-8.509" size="1.778" layer="95"/>
 <attribute name="VALUE" x="486.664" y="-13.589" size="1.778" layer="96"/>
 </instance>
-<instance part="U$15" gate="G$1" x="320.04" y="-2.54" smashed="yes">
-<attribute name="VALUE" x="317.5" y="0" size="1.778" layer="96"/>
+<instance part="U$15" gate="G$1" x="-68.58" y="111.76" smashed="yes">
+<attribute name="VALUE" x="-71.12" y="114.3" size="1.778" layer="96"/>
 </instance>
-<instance part="U$21" gate="G$1" x="342.9" y="-2.54" smashed="yes">
-<attribute name="VALUE" x="339.852" y="-0.508" size="1.778" layer="96"/>
+<instance part="U$21" gate="G$1" x="-86.36" y="111.76" smashed="yes">
+<attribute name="VALUE" x="-89.408" y="113.792" size="1.778" layer="96"/>
 </instance>
 <instance part="U$23" gate="G$1" x="480.06" y="2.54" smashed="yes">
 <attribute name="VALUE" x="477.012" y="4.572" size="1.778" layer="96"/>
@@ -17665,9 +17664,9 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <attribute name="NAME" x="349.25" y="34.5186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="349.25" y="29.718" size="1.778" layer="96"/>
 </instance>
-<instance part="D18" gate="G$1" x="331.47" y="-17.78" smashed="yes" rot="R180">
-<attribute name="NAME" x="333.756" y="-19.685" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="333.756" y="-14.351" size="1.778" layer="96" rot="R180"/>
+<instance part="D18" gate="G$1" x="-80.01" y="106.68" smashed="yes">
+<attribute name="NAME" x="-82.296" y="108.585" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-82.296" y="103.251" size="1.778" layer="96"/>
 </instance>
 <instance part="U$1" gate="G$1" x="377.19" y="11.43" smashed="yes">
 <attribute name="VALUE" x="374.65" y="13.97" size="1.778" layer="96"/>
@@ -17675,9 +17674,6 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <instance part="R29" gate="G$1" x="377.19" y="1.27" smashed="yes" rot="R90">
 <attribute name="NAME" x="375.6914" y="-2.54" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="380.492" y="-2.54" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="5V" gate="1" x="308.61" y="-2.54" smashed="yes">
-<attribute name="NAME" x="307.34" y="0.381" size="1.778" layer="95"/>
 </instance>
 <instance part="GND4" gate="1" x="452.12" y="13.97" smashed="yes">
 <attribute name="VALUE" x="449.58" y="11.43" size="1.778" layer="96"/>
@@ -17740,8 +17736,8 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <instance part="U$18" gate="G$1" x="-53.34" y="111.76" smashed="yes">
 <attribute name="VALUE" x="-55.88" y="114.3" size="1.778" layer="96"/>
 </instance>
-<instance part="U$19" gate="G$1" x="-62.23" y="111.76" smashed="yes">
-<attribute name="VALUE" x="-64.262" y="114.3" size="1.778" layer="96"/>
+<instance part="U$19" gate="G$1" x="-60.96" y="111.76" smashed="yes">
+<attribute name="VALUE" x="-62.992" y="114.3" size="1.778" layer="96"/>
 </instance>
 <instance part="C11" gate="G$1" x="-53.34" y="101.6" smashed="yes">
 <attribute name="NAME" x="-51.816" y="101.981" size="1.778" layer="95"/>
@@ -18041,15 +18037,22 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <junction x="-43.18" y="106.68"/>
 <junction x="-33.02" y="106.68"/>
 <pinref part="VCC" gate="1" pin="MP"/>
-<pinref part="U$19" gate="G$1" pin="VIN"/>
-<wire x1="-62.23" y1="109.22" x2="-62.23" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="U$18" gate="G$1" pin="+5V"/>
 <pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="104.14" x2="-53.34" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="106.68" x2="-53.34" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="-62.23" y1="106.68" x2="-53.34" y2="106.68" width="0.1524" layer="91"/>
 <junction x="-53.34" y="106.68"/>
+<wire x1="-68.58" y1="106.68" x2="-60.96" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="106.68" x2="-53.34" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="-43.18" y1="106.68" x2="-53.34" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="D18" gate="G$1" pin="C"/>
+<wire x1="-68.58" y1="106.68" x2="-77.47" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="U$15" gate="G$1" pin="+5V"/>
+<wire x1="-68.58" y1="109.22" x2="-68.58" y2="106.68" width="0.1524" layer="91"/>
+<junction x="-68.58" y="106.68"/>
+<pinref part="U$19" gate="G$1" pin="VIN"/>
+<wire x1="-60.96" y1="109.22" x2="-60.96" y2="106.68" width="0.1524" layer="91"/>
+<junction x="-60.96" y="106.68"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="P" pin="VCC"/>
@@ -18128,6 +18131,54 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <pinref part="IC1" gate="P" pin="V+"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <wire x1="-12.7" y1="114.3" x2="-12.7" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="1"/>
+<pinref part="U$55" gate="G$1" pin="+5V"/>
+<wire x1="241.3" y1="53.34" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="C6" gate="G$1" pin="1"/>
+<wire x1="241.3" y1="60.96" x2="241.3" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="254" y1="48.26" x2="254" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="254" y1="53.34" x2="241.3" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="241.3" y1="48.26" x2="241.3" y2="53.34" width="0.1524" layer="91"/>
+<junction x="241.3" y="53.34"/>
+<wire x1="241.3" y1="53.34" x2="226.06" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="53.34" x2="226.06" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="VCC@1"/>
+<wire x1="279.4" y1="55.88" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="AVCC"/>
+<wire x1="279.4" y1="71.12" x2="266.7" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="71.12" x2="266.7" y2="60.96" width="0.1524" layer="91"/>
+<junction x="266.7" y="55.88"/>
+<pinref part="IC6" gate="G$1" pin="VCC@2"/>
+<wire x1="266.7" y1="60.96" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="53.34" x2="266.7" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="266.7" y1="53.34" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="60.96" x2="266.7" y2="60.96" width="0.1524" layer="91"/>
+<junction x="241.3" y="60.96"/>
+<junction x="266.7" y="60.96"/>
+</segment>
+<segment>
+<wire x1="377.19" y1="6.35" x2="377.19" y2="8.89" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="+5V"/>
+<pinref part="R29" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<wire x1="419.1" y1="0" x2="426.72" y2="0" width="0.1524" layer="91"/>
+<wire x1="426.72" y1="0" x2="426.72" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="U$12" gate="G$1" pin="+5V"/>
+<pinref part="J4" gate="A" pin="2"/>
+</segment>
+<segment>
+<pinref part="IC7" gate="1" pin="VCC"/>
+<pinref part="U$4" gate="G$1" pin="+5V"/>
+<wire x1="444.5" y1="96.52" x2="441.96" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="441.96" y1="96.52" x2="441.96" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="IC7" gate="1" pin="VCCIO"/>
+<wire x1="444.5" y1="93.98" x2="441.96" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="441.96" y1="93.98" x2="441.96" y2="96.52" width="0.1524" layer="91"/>
+<junction x="441.96" y="96.52"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -18354,17 +18405,17 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 </segment>
 <segment>
 <pinref part="R24" gate="G$1" pin="2"/>
-<wire x1="370.84" y1="63.5" x2="373.38" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="373.38" y1="63.5" x2="373.38" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="398.78" y1="45.72" x2="401.32" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="45.72" x2="401.32" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="R26" gate="G$1" pin="2"/>
-<wire x1="373.38" y1="73.66" x2="373.38" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="373.38" y1="83.82" x2="370.84" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="55.88" x2="401.32" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="401.32" y1="66.04" x2="398.78" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="R25" gate="G$1" pin="2"/>
-<wire x1="370.84" y1="73.66" x2="373.38" y2="73.66" width="0.1524" layer="91"/>
-<junction x="373.38" y="73.66"/>
+<wire x1="398.78" y1="55.88" x2="401.32" y2="55.88" width="0.1524" layer="91"/>
+<junction x="401.32" y="55.88"/>
 <pinref part="SUPPLY9" gate="GND" pin="GND"/>
-<wire x1="373.38" y1="60.96" x2="373.38" y2="63.5" width="0.1524" layer="91"/>
-<junction x="373.38" y="63.5"/>
+<wire x1="401.32" y1="43.18" x2="401.32" y2="45.72" width="0.1524" layer="91"/>
+<junction x="401.32" y="45.72"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -18485,26 +18536,10 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <wire x1="78.74" y1="101.6" x2="101.6" y2="101.6" width="0.1524" layer="91"/>
 <label x="101.6" y="101.6" size="1.778" layer="95" xref="yes"/>
 </segment>
-</net>
-<net name="N$14" class="0">
 <segment>
-<pinref part="R24" gate="G$1" pin="1"/>
-<pinref part="D15" gate="G$1" pin="C"/>
-<wire x1="360.68" y1="63.5" x2="358.14" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="R25" gate="G$1" pin="1"/>
-<pinref part="D16" gate="G$1" pin="C"/>
-<wire x1="360.68" y1="73.66" x2="358.14" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="R26" gate="G$1" pin="1"/>
-<pinref part="D17" gate="G$1" pin="C"/>
-<wire x1="360.68" y1="83.82" x2="358.14" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="PD7(AIN1)"/>
+<wire x1="327.66" y1="55.88" x2="332.74" y2="55.88" width="0.1524" layer="91"/>
+<label x="332.74" y="55.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -18533,66 +18568,6 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <label x="335.28" y="40.64" size="1.778" layer="95"/>
 <wire x1="327.66" y1="40.64" x2="347.98" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="R27" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="+5V" class="1">
-<segment>
-<pinref part="C10" gate="G$1" pin="1"/>
-<pinref part="U$55" gate="G$1" pin="+5V"/>
-<wire x1="241.3" y1="53.34" x2="241.3" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="241.3" y1="60.96" x2="241.3" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="254" y1="48.26" x2="254" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="254" y1="53.34" x2="241.3" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="241.3" y1="48.26" x2="241.3" y2="53.34" width="0.1524" layer="91"/>
-<junction x="241.3" y="53.34"/>
-<wire x1="241.3" y1="53.34" x2="226.06" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="53.34" x2="226.06" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="VCC@1"/>
-<wire x1="279.4" y1="55.88" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="AVCC"/>
-<wire x1="279.4" y1="71.12" x2="266.7" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="71.12" x2="266.7" y2="60.96" width="0.1524" layer="91"/>
-<junction x="266.7" y="55.88"/>
-<pinref part="IC6" gate="G$1" pin="VCC@2"/>
-<wire x1="266.7" y1="60.96" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="53.34" x2="266.7" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="53.34" x2="266.7" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="60.96" x2="266.7" y2="60.96" width="0.1524" layer="91"/>
-<junction x="241.3" y="60.96"/>
-<junction x="266.7" y="60.96"/>
-</segment>
-<segment>
-<wire x1="320.04" y1="-17.78" x2="320.04" y2="-5.08" width="0.1524" layer="91"/>
-<pinref part="U$15" gate="G$1" pin="+5V"/>
-<wire x1="320.04" y1="-17.78" x2="328.93" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="D18" gate="G$1" pin="C"/>
-<pinref part="5V" gate="1" pin="MP"/>
-<wire x1="308.61" y1="-5.08" x2="308.61" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="308.61" y1="-17.78" x2="320.04" y2="-17.78" width="0.1524" layer="91"/>
-<junction x="320.04" y="-17.78"/>
-</segment>
-<segment>
-<wire x1="419.1" y1="0" x2="426.72" y2="0" width="0.1524" layer="91"/>
-<wire x1="426.72" y1="0" x2="426.72" y2="5.08" width="0.1524" layer="91"/>
-<pinref part="U$12" gate="G$1" pin="+5V"/>
-<pinref part="J4" gate="A" pin="2"/>
-</segment>
-<segment>
-<wire x1="377.19" y1="6.35" x2="377.19" y2="8.89" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="+5V"/>
-<pinref part="R29" gate="G$1" pin="2"/>
-</segment>
-<segment>
-<pinref part="IC7" gate="1" pin="VCC"/>
-<pinref part="U$4" gate="G$1" pin="+5V"/>
-<wire x1="444.5" y1="96.52" x2="441.96" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="441.96" y1="96.52" x2="441.96" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="IC7" gate="1" pin="VCCIO"/>
-<wire x1="444.5" y1="93.98" x2="441.96" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="441.96" y1="93.98" x2="441.96" y2="96.52" width="0.1524" layer="91"/>
-<junction x="441.96" y="96.52"/>
 </segment>
 </net>
 <net name="3V3" class="1">
@@ -18629,16 +18604,16 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <pinref part="C8" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U$21" gate="G$1" pin="VUSB"/>
-<wire x1="342.9" y1="-5.08" x2="342.9" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="342.9" y1="-17.78" x2="334.01" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="D18" gate="G$1" pin="A"/>
-</segment>
-<segment>
 <pinref part="MINI-USB-B" gate="G$1" pin="VBUS"/>
 <pinref part="U$22" gate="G$1" pin="VUSB"/>
 <wire x1="453.39" y1="30.48" x2="449.58" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="449.58" y1="30.48" x2="449.58" y2="33.02" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D18" gate="G$1" pin="A"/>
+<wire x1="-82.55" y1="106.68" x2="-86.36" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="U$21" gate="G$1" pin="VUSB"/>
+<wire x1="-86.36" y1="106.68" x2="-86.36" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RX" class="1">
@@ -18755,29 +18730,22 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <wire x1="251.46" y1="91.44" x2="243.84" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="IC6" gate="G$1" pin="PB2(SS/OC1B)"/>
-<pinref part="D17" gate="G$1" pin="A"/>
-<wire x1="327.66" y1="83.82" x2="350.52" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="IC6" gate="G$1" pin="PB1(OC1A)"/>
-<wire x1="327.66" y1="81.28" x2="347.98" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="347.98" y1="81.28" x2="347.98" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="D16" gate="G$1" pin="A"/>
-<wire x1="347.98" y1="73.66" x2="350.52" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="375.92" y1="63.5" x2="375.92" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="D17" gate="G$1" pin="A"/>
+<wire x1="378.46" y1="55.88" x2="375.92" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="PC1(ADC1)"/>
+<wire x1="327.66" y1="63.5" x2="375.92" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
-<pinref part="D15" gate="G$1" pin="A"/>
-<wire x1="350.52" y1="63.5" x2="345.44" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="63.5" x2="345.44" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="PB0(ICP)"/>
-<wire x1="345.44" y1="78.74" x2="327.66" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="IC6" gate="G$1" pin="PC0(ADC0)"/>
+<wire x1="373.38" y1="60.96" x2="327.66" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="373.38" y1="60.96" x2="373.38" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="D16" gate="G$1" pin="A"/>
+<wire x1="373.38" y1="45.72" x2="378.46" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BUTTIN" class="0">
@@ -18787,9 +18755,9 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <label x="111.76" y="60.96" size="0.889" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="PC2(ADC2)"/>
-<wire x1="327.66" y1="66.04" x2="332.74" y2="66.04" width="0.1524" layer="91"/>
-<label x="332.74" y="66.04" size="0.889" layer="95"/>
+<pinref part="IC6" gate="G$1" pin="PC5(ADC5/SCL)"/>
+<wire x1="327.66" y1="73.66" x2="332.74" y2="73.66" width="0.1524" layer="91"/>
+<label x="332.74" y="73.66" size="0.889" layer="95"/>
 </segment>
 </net>
 <net name="BUTTOUT" class="0">
@@ -18799,9 +18767,9 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <label x="111.76" y="53.34" size="0.889" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="PC1(ADC1)"/>
-<wire x1="327.66" y1="63.5" x2="332.74" y2="63.5" width="0.1524" layer="91"/>
-<label x="332.74" y="63.5" size="0.889" layer="95"/>
+<pinref part="IC6" gate="G$1" pin="PC4(ADC4/SDA)"/>
+<wire x1="327.66" y1="71.12" x2="332.74" y2="71.12" width="0.1524" layer="91"/>
+<label x="332.74" y="71.12" size="0.889" layer="95"/>
 </segment>
 </net>
 <net name="BUTTSTOP" class="0">
@@ -18811,9 +18779,37 @@ lasers onderbroken zijn gaat het signaal omlaag</text>
 <label x="111.76" y="45.72" size="0.889" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="PC0(ADC0)"/>
-<wire x1="327.66" y1="60.96" x2="332.74" y2="60.96" width="0.1524" layer="91"/>
-<label x="332.74" y="60.96" size="0.889" layer="95"/>
+<pinref part="IC6" gate="G$1" pin="PC3(ADC3)"/>
+<wire x1="327.66" y1="68.58" x2="332.74" y2="68.58" width="0.1524" layer="91"/>
+<label x="332.74" y="68.58" size="0.889" layer="95"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<pinref part="D17" gate="G$1" pin="C"/>
+<pinref part="R25" gate="G$1" pin="1"/>
+<wire x1="386.08" y1="55.88" x2="388.62" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="D15" gate="G$1" pin="A"/>
+<pinref part="IC6" gate="G$1" pin="PC2(ADC2)"/>
+<wire x1="378.46" y1="66.04" x2="327.66" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="D16" gate="G$1" pin="C"/>
+<pinref part="R24" gate="G$1" pin="1"/>
+<wire x1="386.08" y1="45.72" x2="388.62" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="R26" gate="G$1" pin="1"/>
+<pinref part="D15" gate="G$1" pin="C"/>
+<wire x1="388.62" y1="66.04" x2="386.08" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

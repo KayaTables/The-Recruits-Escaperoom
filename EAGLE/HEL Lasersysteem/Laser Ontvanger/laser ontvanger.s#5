@@ -8022,7 +8022,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </package>
 </packages>
 <packages3d>
-<package3d name="SOT23-5" urn="urn:adsk.eagle:package:2406/1" type="box" library_version="1">
+<package3d name="SOT23-5" urn="urn:adsk.eagle:package:2406/2" type="model" library_version="3">
 <description>Small Outline Transistor
 SOT753 - Philips Semiconductors
 Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_HCT1G66_3.pdf</description>
@@ -8030,7 +8030,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <packageinstance name="SOT23-5"/>
 </packageinstances>
 </package3d>
-<package3d name="SC70-5" urn="urn:adsk.eagle:package:2405/1" type="box" library_version="1">
+<package3d name="SC70-5" urn="urn:adsk.eagle:package:2405/2" type="model" library_version="3">
 <description>SMT SC70-5
 SOT353 - Philips Semiconductors
 Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_HCT1G66_3.pdf</description>
@@ -8064,7 +8064,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="74*1G14" urn="urn:adsk.eagle:component:2432/1" prefix="IC" library_version="1">
+<deviceset name="74*1G14" urn="urn:adsk.eagle:component:2432/2" prefix="IC" library_version="3">
 <description>Single &lt;b&gt;Schmitt-Trigger Inverter &lt;/b&gt;Gate</description>
 <gates>
 <gate name="A" symbol="7414" x="10.16" y="0"/>
@@ -8079,7 +8079,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <connect gate="P" pin="VCC" pad="5"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:2406/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2406/2"/>
 </package3dinstances>
 <technologies>
 <technology name="AHC"/>
@@ -8096,7 +8096,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <connect gate="P" pin="VCC" pad="5"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:2405/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2405/2"/>
 </package3dinstances>
 <technologies>
 <technology name="AHC"/>
@@ -8130,8 +8130,9 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="OUT-" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="LSP10" device="" package3d_urn="urn:adsk.eagle:package:26501/1"/>
-<part name="IC2" library="74xx-little-de" library_urn="urn:adsk.eagle:library:86" deviceset="74*1G14" device="DBV" package3d_urn="urn:adsk.eagle:package:2406/1" technology="LVC"/>
+<part name="IC2" library="74xx-little-de" library_urn="urn:adsk.eagle:library:86" deviceset="74*1G14" device="DBV" package3d_urn="urn:adsk.eagle:package:2406/2" technology="LVC"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100n"/>
+<part name="IC3" library="74xx-little-de" library_urn="urn:adsk.eagle:library:86" deviceset="74*1G14" device="DBV" package3d_urn="urn:adsk.eagle:package:2406/2" technology="LVC"/>
 </parts>
 <sheets>
 <sheet>
@@ -8163,28 +8164,35 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <attribute name="NAME" x="-1.27" y="71.12" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-1.27" y="54.61" size="1.778" layer="96"/>
 </instance>
-<instance part="OUT+" gate="1" x="71.12" y="50.8" smashed="yes" rot="R270">
-<attribute name="NAME" x="69.85" y="46.101" size="1.778" layer="95"/>
+<instance part="OUT+" gate="1" x="129.54" y="50.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="127" y="45.72" size="1.778" layer="95"/>
 </instance>
-<instance part="P+2" gate="VCC" x="78.74" y="73.66" smashed="yes">
-<attribute name="VALUE" x="78.74" y="76.2" size="1.778" layer="96"/>
+<instance part="P+2" gate="VCC" x="101.6" y="96.52" smashed="yes">
+<attribute name="VALUE" x="101.6" y="99.06" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY1" gate="GND" x="78.74" y="48.26" smashed="yes">
-<attribute name="VALUE" x="78.74" y="43.18" size="1.778" layer="96"/>
+<instance part="SUPPLY1" gate="GND" x="101.6" y="71.12" smashed="yes">
+<attribute name="VALUE" x="99.06" y="66.04" size="1.778" layer="96"/>
 </instance>
-<instance part="OUT-" gate="1" x="93.98" y="60.96" smashed="yes" rot="R270">
-<attribute name="NAME" x="97.79" y="61.341" size="1.778" layer="95"/>
+<instance part="OUT-" gate="1" x="109.22" y="50.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="106.68" y="45.72" size="1.778" layer="95"/>
 </instance>
-<instance part="IC2" gate="A" x="78.74" y="60.96" smashed="yes">
-<attribute name="NAME" x="80.01" y="64.135" size="1.778" layer="95"/>
-<attribute name="VALUE" x="80.01" y="55.88" size="1.778" layer="96"/>
+<instance part="IC2" gate="A" x="96.52" y="63.5" smashed="yes">
+<attribute name="NAME" x="100.33" y="66.675" size="1.778" layer="95"/>
+<attribute name="VALUE" x="97.79" y="58.42" size="1.778" layer="96"/>
 </instance>
-<instance part="IC2" gate="P" x="78.74" y="60.96" smashed="yes">
-<attribute name="NAME" x="78.105" y="60.325" size="1.778" layer="95"/>
+<instance part="IC2" gate="P" x="101.6" y="83.82" smashed="yes">
+<attribute name="NAME" x="103.505" y="90.805" size="1.778" layer="95"/>
 </instance>
 <instance part="C2" gate="G$1" x="50.8" y="63.5" smashed="yes">
 <attribute name="NAME" x="52.324" y="63.881" size="1.778" layer="95"/>
 <attribute name="VALUE" x="52.324" y="58.801" size="1.778" layer="96"/>
+</instance>
+<instance part="IC3" gate="A" x="116.84" y="63.5" smashed="yes">
+<attribute name="NAME" x="118.11" y="66.675" size="1.778" layer="95"/>
+<attribute name="VALUE" x="118.11" y="58.42" size="1.778" layer="96"/>
+</instance>
+<instance part="IC3" gate="P" x="109.22" y="83.82" smashed="yes">
+<attribute name="NAME" x="111.125" y="90.805" size="1.778" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -8206,7 +8214,10 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <segment>
 <pinref part="IC2" gate="P" pin="VCC"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="78.74" y1="71.12" x2="78.74" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="93.98" x2="101.6" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="P" pin="VCC"/>
+<wire x1="101.6" y1="91.44" x2="109.22" y2="91.44" width="0.1524" layer="91"/>
+<junction x="101.6" y="91.44"/>
 </segment>
 </net>
 <net name="OUT" class="0">
@@ -8214,16 +8225,6 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <wire x1="22.86" y1="63.5" x2="17.78" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="VO"/>
 <label x="22.86" y="63.5" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="OUT+" gate="1" pin="MP"/>
-<wire x1="68.58" y1="50.8" x2="66.04" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="50.8" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="60.96" x2="63.5" y2="60.96" width="0.1524" layer="91"/>
-<junction x="66.04" y="60.96"/>
-<label x="63.5" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="IC2" gate="A" pin="I"/>
-<wire x1="66.04" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -8261,14 +8262,29 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <segment>
 <pinref part="IC2" gate="P" pin="GND"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<wire x1="78.74" y1="50.8" x2="78.74" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="73.66" x2="101.6" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="P" pin="GND"/>
+<wire x1="109.22" y1="76.2" x2="101.6" y2="76.2" width="0.1524" layer="91"/>
+<junction x="101.6" y="76.2"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="N$3" class="0">
 <segment>
-<pinref part="IC2" gate="A" pin="O"/>
+<pinref part="IC3" gate="A" pin="I"/>
+<wire x1="109.22" y1="63.5" x2="111.76" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="OUT-" gate="1" pin="MP"/>
-<wire x1="91.44" y1="60.96" x2="88.9" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="53.34" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="A" pin="O"/>
+<wire x1="109.22" y1="63.5" x2="106.68" y2="63.5" width="0.1524" layer="91"/>
+<junction x="109.22" y="63.5"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="OUT+" gate="1" pin="MP"/>
+<wire x1="129.54" y1="53.34" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="A" pin="O"/>
+<wire x1="129.54" y1="63.5" x2="127" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -1,25 +1,25 @@
 EAGLE AutoRouter Statistics:
 
-Job           : C:/Users/kayah/OneDrive/Het Echte Leven BV/EAGLE/HEL Lasersysteem/Laser Centraal/Laser Centraal.brd
+Job           : C:/Users/kayah/OneDrive/Het Echte Leven BV/HELshooter repository/EAGLE/HEL Lasersysteem/Laser Centraal/Laser Centraal.brd
 
-Start at      : 20:41:52 (10/03/2019)
-End at        : 20:42:07 (10/03/2019)
+Start at      : 13:36:15 (05/05/2019)
+End at        : 01:00:00 (01/01/1970)
 Elapsed time  : 00:00:00
 
-Signals       :    29   RoutingGrid: 20 mil  Layers: 2
-Connections   :    62   predefined:  36 ( 0 Vias )
+Signals       :    59   RoutingGrid: 25 mil  Layers: 2
+Connections   :   199   predefined:  127 ( 28 Vias )
 
-Router memory :   48112
+Router memory :   0
 
-Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
+Passname          :          
 
-Time per pass     :  00:00:00  00:00:00  00:00:00  00:00:00  00:00:00  00:00:00
-Number of Ripups  :         0         0         0         0         0         0
-max. Level        :         0         0         0         0         0         0
-max. Total        :         0         0         0         0         0         0
+Time per pass     :  00:00:00
+Number of Ripups  :         0
+max. Level        :         0
+max. Total        :         0
 
-Routed            :         0        26        26        26        26        26
-Vias              :         0        20        16        12        12        11
-Resolution        :    58.1 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
+Routed            :         0
+Vias              :         0
+Resolution        :    63.8 %
 
 Final             : 
