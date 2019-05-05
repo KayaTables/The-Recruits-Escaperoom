@@ -1,11 +1,8 @@
-# Handle line endings automatically for files detected as text
-# and leave all files detected as binary untouched.
-*               text=auto
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
 
-#
-# The above will handle all files NOT found below
-#
-# These files are text and should be normalized (Convert crlf => lf)
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
 
 *.gitattributes text
 .gitignore      text
@@ -13,13 +10,11 @@
 *.txt		text
 *.html		text
 
-#
-# These files are text and should not be normalized
-#
+# Denote all files that are truly binary and should not be modified.
 
-*.b#? 		-text
-*.s#? 		-text
-*.brd		-text
-*.sch		-text
-*.lbr		-text
-*.css		-text
+*.b#? 		binary
+*.s#? 		binary
+*.brd		binary
+*.sch		binary
+*.lbr		binary
+*.css		binary
