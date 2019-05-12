@@ -80,7 +80,7 @@
 <hole x="0" y="16" drill="10"/>
 <hole x="7" y="21" drill="2"/>
 <hole x="-7" y="21" drill="2"/>
-<text x="5.08" y="-0.508" size="0.8128" layer="26" rot="MR0">HEL Laser Zender
+<text x="-9.144" y="-7.112" size="0.8128" layer="26" rot="MR90">HEL Laser Zender
 Kaya Hartwig
 (c) 2019</text>
 </plain>
