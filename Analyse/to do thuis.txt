@@ -2,8 +2,6 @@
 
 Checken welke analyse's nog gemaakt moeten worden
 
-Ontwerp computer met passcode maken (EAGLE)
-
 laser testen
 
 vault analyseren
