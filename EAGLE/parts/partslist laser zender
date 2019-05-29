@@ -1,28 +1,28 @@
 Partlist
 
-Exported from laser zender.sch at 19/04/2019 14:33
+Exported from laser zender.brd at 29/05/2019 13:20
 
 EAGLE Version 9.3.2 Copyright (c) 1988-2019 Autodesk, Inc.
 
 Assembly variant: 
 
-Part     Value                    Device          Package      Library       Sheet
+Part     Value                    Package      Library       Position (mil)        Orientation
 
-C1       1n                       C-EUC0805       C0805        rcl           1
-C2       10n                      C-EUC0805       C0805        rcl           1
-C3       100n                     C-EUC0805       C0805        rcl           1
-C4       10u                      C-EUC0805       C0805        rcl           1
-C5       10n                      C-EUC0805       C0805        rcl           1
-C6       10n                      C-EUC0805       C0805        rcl           1
-GND      LSP10                    LSP10           LSP10        solpad        1
-IC2      LM556D                   LM556D          SO14         linear edited 1
-IR                                LEDCHIPLED_0805 CHIPLED_0805 led           1
-L+       LSP10                    LSP10           LSP10        solpad        1
-L-       LSP10                    LSP10           LSP10        solpad        1
-R1       100k                     R-EU_R0805      R0805        rcl           1
-R2       1k                       R-EU_R0805      R0805        rcl           1
-R3       18k                      R-EU_R0805      R0805        rcl           1
-R4       470R                     R-EU_R0805      R0805        rcl           1
-R5       5k (G32A lcsc-footprint) TRIM_EU-3223W   3223W        pot           1
-R6       100k                     R-EU_R0805      R0805        rcl           1
-VCC      LSP10                    LSP10           LSP10        solpad        1
+C1       1n                       C0805        rcl           (-280 120)            R90
+C2       10n                      C0805        rcl           (-200 -40)            R270
+C3       100n                     C0805        rcl           (0 300)               MR180
+C4       10u                      C0805        rcl           (0 220)               MR180
+C5       10n                      C0805        rcl           (200 -40)             R270
+C6       10n                      C0805        rcl           (280 120)             R90
+GND      LSP10                    LSP10        solpad        (260 360)             MR180
+IC2      LM556D                   SO14         linear edited (0 0)                 R270
+IR                                CHIPLED_0805 led           (0 -240)              R270
+L+       LSP10                    LSP10        solpad        (-260 460)            MR0
+L-       LSP10                    LSP10        solpad        (260 460)             MR0
+R1       100k                     R0805        rcl           (200 120)             R90
+R2       1k                       R0805        rcl           (-80 240)             R180
+R3       18k                      R0805        rcl           (-200 120)            R90
+R4       470R                     R0805        rcl           (120 -120)            MR90
+R5       5k (G32A lcsc-footprint) 3223W        pot           (0 -200)              MR90
+R6       100k                     R0805        rcl           (80 240)              R0
+VCC      LSP10                    LSP10        solpad        (-260 360)            MR180
