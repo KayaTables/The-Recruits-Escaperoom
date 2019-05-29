@@ -12460,9 +12460,9 @@ drill 1.0 mm</description>
 <attribute name="NAME" x="34.0614" y="49.53" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="36.322" y="49.53" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R5" gate="1" x="53.34" y="27.94" smashed="yes" rot="MR90">
-<attribute name="NAME" x="52.07" y="21.971" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="52.07" y="24.13" size="1.778" layer="96" rot="MR180"/>
+<instance part="R5" gate="1" x="53.34" y="27.94" smashed="yes" rot="R90">
+<attribute name="NAME" x="52.07" y="23.749" size="1.778" layer="95"/>
+<attribute name="VALUE" x="52.07" y="21.59" size="1.778" layer="96"/>
 </instance>
 <instance part="VCC" gate="1" x="33.02" y="68.58" smashed="yes">
 <attribute name="NAME" x="31.75" y="71.501" size="1.778" layer="95"/>
@@ -12578,8 +12578,8 @@ drill 1.0 mm</description>
 <junction x="38.1" y="27.94"/>
 <pinref part="L-" gate="1" pin="MP"/>
 <wire x1="45.72" y1="25.4" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="R5" gate="1" pin="A"/>
-<wire x1="45.72" y1="27.94" x2="48.26" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="R5" gate="1" pin="E"/>
+<wire x1="48.26" y1="27.94" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
 <junction x="45.72" y="27.94"/>
 </segment>
 <segment>
