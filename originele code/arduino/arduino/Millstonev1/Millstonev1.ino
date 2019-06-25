@@ -291,6 +291,7 @@ void loop() {
     fase = 2;
     tfase[0] = millis() / 1000;
 
+    /* Kaya: Dit alarm moet niet meer af gaan op dit moment
     //Alarm licht en geluid gaat aan na 5 seconde
     delay(5000);
     digitalWrite(alarmlicht, HIGH);
@@ -298,6 +299,7 @@ void loop() {
     Serial.println("Alarm is aan.");
     DIOch[3] = 0;
     DIObf[3] = 0;
+    */
   }
 
   //fase 3
