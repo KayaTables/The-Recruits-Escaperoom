@@ -1,0 +1,3 @@
+DIOst is de startstate van alle IO
+DIOs is een variabele die de zojuist gecheckte IO statussen bevat
+DIOch "Digital IO has been changed"

@@ -1,0 +1,5 @@
+https://www.conrad.nl/p/sauter-decibelmeter-datalogger-su-130-30-130-db-20-hz-12500-hz-1676540
+
+Heeft RS232 en analoge output (10 mV per dB)
+
+als RS232 niet simpel genoeg is kan de analoge output aangesloten worden op de ADC van de arduino. 

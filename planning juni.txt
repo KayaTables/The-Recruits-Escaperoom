@@ -1,0 +1,19 @@
+in testruns moet alles af
+
+elektromagneten zelf uitzoeken (wat voor types)
+
+uitzoeken of die knoppen puzzel werkt
+
+uitzoeken of twee van de camera's doorgevoerd kunnen worden naar twee schermen in de escaperoom
+
+rouchpad kluis verplaatsen
+
+deur die de kluis uit leid moet met magneet afgesloten kunnen worden en unlocked vanuit de controlroom
+
+knop met russisch volkslied uit speaker (mag gewoon speaker kopen)
+
+twee nieuwe raspberry's met "intel" zoals vault computer
+
+mol krijgt de opdracht om team te naaien. de mol moet bij aanvang van de game een usb stick hebben en zonder dat de rest het door heeft de files erop op een raspberry plaatsen
+
+"ENTER YOUR PERSONAL NUMBER" bij inlog

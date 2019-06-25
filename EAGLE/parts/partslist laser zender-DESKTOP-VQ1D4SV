@@ -1,6 +1,6 @@
 Partlist
 
-Exported from laser zender.brd at 29/05/2019 13:20
+Exported from laser zender.brd at 19/05/2019 18:58
 
 EAGLE Version 9.3.2 Copyright (c) 1988-2019 Autodesk, Inc.
 
@@ -8,7 +8,7 @@ Assembly variant:
 
 Part     Value                    Package      Library       Position (mil)        Orientation
 
-C1       220p (check)             C0805        rcl           (-280 120)            R90
+C1       1n                       C0805        rcl           (-280 120)            R90
 C2       10n                      C0805        rcl           (-200 -40)            R270
 C3       100n                     C0805        rcl           (0 300)               MR180
 C4       10u                      C0805        rcl           (0 220)               MR180
@@ -20,8 +20,8 @@ IR                                CHIPLED_0805 led           (0 -240)           
 L+       LSP10                    LSP10        solpad        (-260 460)            MR0
 L-       LSP10                    LSP10        solpad        (260 460)             MR0
 R1       100k                     R0805        rcl           (200 120)             R90
-R2       9k1 (check)              R0805        rcl           (-80 240)             R180
-R3       82k (check)              R0805        rcl           (-200 120)            R90
+R2       1k                       R0805        rcl           (-80 240)             R180
+R3       18k                      R0805        rcl           (-200 120)            R90
 R4       470R                     R0805        rcl           (120 -120)            MR90
 R5       5k (G32A lcsc-footprint) 3223W        pot           (0 -200)              MR90
 R6       100k                     R0805        rcl           (80 240)              R0

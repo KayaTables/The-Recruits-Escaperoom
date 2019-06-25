@@ -1,0 +1,48 @@
+Het volgende moet nog gedaan worden voor eind juni (niet compleet!
+
+	REALISATIE
+klasgenoot uitnodigen om te helpen
+
+	LASERSYSTEEM
+centraalbord maken
+centraalbord programmeren
+kabels bestellen
+uitzoeken hoe aan te sluiten op arduino 
+arduino code aanpassen voor laser
+
+	SCHUIFDEUR
+centrale arduino code aanpassen dat alarm niet af gaat door deur
+zorgen dat de host het alarm aan kan zetten
+
+	ROOK
+rookmachine kiezen, 
+voorstellen,
+bestellen
+
+	COMPUTER MET PASSCODE
+nieuwe versie met betere knoppen kan later?
+tweede scherm aansluiten
+
+	BUIZENPOST
+Magneet kiezen
+Uitzoeken of er een power supply is voor de magneet
+Knop kiezen
+
+	TELEFOON
+Telefoon kiezen
+Telefoon voorstellen
+Bestellen en testen
+
+	COMPUTERPUZZEL KLUIZEN
+replica maken met meerdere accounts. zie planning juni
+
+	VENTILATIESCHACHT
+Knoppen met ledjes bestellen 
+code centrale arduino aanpassen?
+
+	VAULT
+DB meter kiezen (mag duur)
+uitzoeken hoe aan sluiten op arduino
+
+	MISC
+zorgen dat er een simpele speler komt die het russische volkslied speelt
