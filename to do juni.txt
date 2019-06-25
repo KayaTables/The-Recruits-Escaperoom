@@ -1,4 +1,4 @@
-Het volgende moet nog gedaan worden voor eind juni (niet compleet!
+Het volgende moet nog gedaan worden voor eind juni (niet compleet!)
 
 	REALISATIE
 klasgenoot uitnodigen om te helpen
@@ -6,30 +6,31 @@ klasgenoot uitnodigen om te helpen
 	LASERSYSTEEM
 centraalbord maken
 centraalbord programmeren
-kabels bestellen
-uitzoeken hoe aan te sluiten op arduino 
+lasers solderen
+x	kabels bestellen
+x	uitzoeken hoe aan te sluiten op arduino 
 arduino code aanpassen voor laser
 
 	SCHUIFDEUR
-centrale arduino code aanpassen dat alarm niet af gaat door deur
+x	centrale arduino code aanpassen dat alarm niet af gaat door deur
 zorgen dat de host het alarm aan kan zetten
 
 	ROOK
-rookmachine kiezen, 
-voorstellen,
-bestellen
+x	rookmachine kiezen, 
+x	voorstellen,
+x	bestellen
 
 	COMPUTER MET PASSCODE
 nieuwe versie met betere knoppen kan later?
 tweede scherm aansluiten
 
 	BUIZENPOST
-Magneet kiezen
+x	Magneet kiezen
 Uitzoeken of er een power supply is voor de magneet
-Knop kiezen
+x	Knop kiezen
 
 	TELEFOON
-Telefoon kiezen
+x	Telefoon kiezen
 Telefoon voorstellen
 Bestellen en testen
 
@@ -38,10 +39,10 @@ replica maken met meerdere accounts. zie planning juni
 
 	VENTILATIESCHACHT
 Knoppen met ledjes bestellen 
-code centrale arduino aanpassen?
+code centrale arduino aanpassen? (vereist wss aanpassing bedrading)
 
 	VAULT
-DB meter kiezen (mag duur)
+x	DB meter kiezen (mag duur)
 uitzoeken hoe aan sluiten op arduino
 
 	MISC
