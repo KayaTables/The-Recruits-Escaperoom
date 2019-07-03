@@ -381,6 +381,7 @@ void loop() {
 
   }
 
+  // Kaya: dit zijn vermoedelijk de knoppen die nu in de schacht zitten
   //fase 8
   if (fase == 7 &&  DIOs[8] == 1 ) { //&& DIOs[9]==1 && DIOs[10]==1 && DIOs[11]==1 && DIOs[12]==1 && DIOs[13]==1){ //alle twisterknoppen zijn ingedrukt
     Serial.println("Alle twisterknoppen zijn ingedrukt.");
