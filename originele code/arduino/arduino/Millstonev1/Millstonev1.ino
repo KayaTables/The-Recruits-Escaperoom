@@ -1,34 +1,40 @@
-// Hier worden variabelen gedeclareerd:
+// Hier worden variabe  len gedeclareerd:
 // in dit geval welke IO-pin bij welke input hoort.
 int sleutelschakelaar = 57; //I0.5
 int meterkast = 56; //I0.4
 int checkschuif = 55; //I0.3
 int codealarm = 54; //I0.2
-int checktelefoon = 3; //I0.1
+//int checktelefoon = 3; //I0.1 //kaya: nu laser
+int laserin = 20; //SDA. rood
 int checkbalie = 2; //I0.0
 
 int checkluikjeHEL = 63; //I1.5
 int checkkast = 62; //I1.4
 int twister1 = 61; //I1.3
-int twister2 = 60; //I1.2
+int twister2 = 60; //I1.2 //ongebruikt
 int lasers = 19; //I1.1
 int bardeur = 18; //I1.0
 
-int twister5 = 69; //I2.5
-int twister6 = 68; //I2.4
+int microfoonalarm = 50; //50  rood
+int twister6 = 68; //I2.4  //ongebruikt
 int toestskluis1 = 67;//I2.3
 int toestskluis2 = 66;//I2.2
 int toestskluis3 = 21;//I2.1
 
+int laserreset = 21;//SCL. geel
+int microfoonenable = 51;//51 geel
 
-int Ins[17] = {sleutelschakelaar, meterkast, checkschuif, codealarm, checktelefoon,
+
+
+//kaya: volgens mij is dit een array met pinnummers van alle sensoren
+int Ins[17] = {sleutelschakelaar, meterkast, checkschuif, codealarm, laserin,
                checkbalie, checkluikjeHEL, checkkast, twister1, twister2, lasers,
-               bardeur, twister5, twister6, toestskluis1, toestskluis2, toestskluis3
+               bardeur, microfoonalarm, twister6, toestskluis1, toestskluis2, toestskluis3
               };
 
-String Insstr[17] = {"sleutelschakelaar", "meterkast", "checkschuif", "codealarm", "checktelefoon",
+String Insstr[17] = {"sleutelschakelaar", "meterkast", "checkschuif", "codealarm", "laserin",
                      "checkbalie", "checkluikjeHEL", "checkkast", "twister1", "twister2", "lasers",
-                     "twister4", "twister5", "twister6", "toestskluis1", "toestskluis2", "toestskluis3"
+                     "twister4", "microfoonalarm", "twister6", "toestskluis1", "toestskluis2", "toestskluis3"
                     };
 
 // En hier welke IO-pin (verbonden met een relais) bij welke magneet/output
@@ -39,7 +45,7 @@ int alarmbel = 40; //R0.5
 int LED = 24; //R0.4
 
 int telefoongeluid = 42; //R1.8
-int kleefbuizenpost = 43; //R1.7
+int kleefbuizenpost = 43; //R1.7 //kaya: wordt niet meer gebruikt
 int kleefbalie = 44; //R1.6
 int kleefluik = 45; //R1.5
 int stroborookmachine = 32; //R1.4
@@ -71,7 +77,7 @@ boolean DIOst[17] = {1, //0 IOsleutelschakelaar
                      0, //9 IOtwister2
                      0, //10 IOlasers
                      0, //11 IObardeur
-                     0, //12 IOtwister5
+                     0, //12 IOmicrofoonalarm
                      0, //13 IOtwister6
                      0, //14 IOtoestskluis1
                      0, //15 IOtoestskluis2
@@ -88,7 +94,9 @@ int incomingByte = 0;
 
 int fase = 0;
 
+boolean laserdone = 0;
 boolean doordone = 0;
+boolean microfoonalarmEnable = 1;
 
 float tfase[17];
 
@@ -112,7 +120,7 @@ void setup() {
   pinMode(meterkast, INPUT);
   pinMode(checkschuif, INPUT);
   pinMode(codealarm, INPUT);
-  pinMode(checktelefoon, INPUT);
+  pinMode(laserin, INPUT);
   pinMode(checkbalie, INPUT);
 
   pinMode(checkluikjeHEL, INPUT);
@@ -122,12 +130,13 @@ void setup() {
   pinMode(lasers, INPUT);
   pinMode(bardeur, INPUT);
 
-  pinMode(twister5, INPUT);
+  pinMode(microfoonalarm, INPUT);
   pinMode(twister6, INPUT);
   pinMode(toestskluis1, INPUT);
   pinMode(toestskluis2, INPUT);
   pinMode(toestskluis3, INPUT);
 
+  pinMode(laserin, INPUT);
 
   // Initiaseer de magneten en outputs als outputs
   pinMode(kleefschuif, OUTPUT);
@@ -151,6 +160,9 @@ void setup() {
 
   pinMode(kleefkluis3, OUTPUT);
 
+  pinMode(laserreset, OUTPUT);
+  pinMode(microfoonenable, OUTPUT);
+
   // Initialiseer de serial communication op 9600 (standaard)
   Serial.begin(9600);
   // Hier wordt naar de serial port geschreven dat de variabelen en pins zijn geinitieerd
@@ -160,7 +172,7 @@ void setup() {
 
   // De startwaardes van de outputs worden hier ook aangegeven en uitgeschreven
   // Alle magneten moeten aan het begin bijvoorbeeld aan staan
-  digitalWrite(kleefschuif, HIGH);
+  digitalWrite(kleefschuif, LOW); //kaya: de schuifdeur staat niet meteen op slot
   digitalWrite(kleefbuizenpost, HIGH);
   digitalWrite(kleefbalie, LOW);
   digitalWrite(kleefluik, HIGH);
@@ -169,20 +181,24 @@ void setup() {
   digitalWrite(kleefkluis2, HIGH);
   digitalWrite(kleefkluis3, HIGH);
 
+  digitalWrite(microfoonenable, LOW);
+  delay(50);
+  digitalWrite(microfoonenable, HIGH);
+
   // Als deurtje van de sleutelschakelaar open staat. Waarschuwen!
   //if (digitalRead(sleutelschakelaar)==0){
   // Serial.println("Deurtje van de sleutel staat nog open");
   // delay(2000);
   //}
 
-
-  // Als schuif open dan dichtmaken
-  // if (digitalRead(checkschuif)==0){
-  //    digitalWrite(motorschuif, HIGH);
-  //   Serial.println("De schuifdeur was open");
-  //   delay(500);
-  //   digitalWrite(motorschuif, LOW);
-  // }
+//kaya: deur gaat bij start open
+  // Als schuif dicht dan openmaken
+   if (digitalRead(checkschuif)==1){
+      digitalWrite(motorschuif, HIGH);
+   //  Serial.println("De schuifdeur was open");
+     delay(500);
+     digitalWrite(motorschuif, LOW);
+   }
 
   // Rest outputs uitzetten voor de zekerheid
   digitalWrite(alarmlicht, LOW);
@@ -241,8 +257,58 @@ void loop() {
       }
     }
   }
- 
 
+ //kaya: hier wordt het lasersysteem gecheckt
+ if (digitalRead(laserin) && !laserdone)
+ {
+    digitalWrite(kleefschuif, HIGH); 
+    delay(200);
+    digitalWrite(motorschuif, HIGH); 
+    delay(1000);
+    digitalWrite(motorschuif, LOW);
+    while(!digitalRead(checkschuif)) //wacht tot de schuifdeur als dicht wordt geregistreerd
+    delay(1000); //de deur is nog net niet dicht als de sensor hem ziet
+    laserdone = 1; //lasersysteem uit zetten
+ }
+  //Serial.println(digitalRead(sleutelschakelaar));
+  if (!digitalRead(sleutelschakelaar))
+  {
+    digitalWrite(kleefschuif, LOW);
+    digitalWrite(laserreset, HIGH);
+    delay(200);
+    digitalWrite(laserreset, LOW);
+    laserdone = 1; //laser blijft/gaat uit na openen
+  }
+
+  int microfoonalarm_set;
+  //kaya: hier wordt het microfoonalarm gecheckt
+  if (digitalRead(microfoonalarm) && microfoonalarmEnable)
+  {
+    microfoonalarm_set = 1;
+    digitalWrite(alarmlicht, HIGH);
+    digitalWrite(alarmbel, HIGH);
+  }
+
+  if (digitalRead(!microfoonalarm) && microfoonalarm_set)
+  {
+    digitalWrite(alarmlicht, LOW);
+    digitalWrite(alarmbel, LOW);
+  }
+
+  //kaya: check of de alarmcode is ingevoerd
+  if (digitalRead(codealarm))
+  {
+    microfoonalarm_set = 0;
+    //microfoonalarmEnable = 0;
+    digitalWrite(microfoonenable, LOW);
+    digitalWrite(alarmlicht, LOW);
+    digitalWrite(alarmbel, LOW);
+    delay(50);
+    digitalWrite(microfoonenable, HIGH);
+  }
+  //einde kaya
+
+/*
   //Serial.println(" ");
   // los van volgorde als bardeur open en schuifdeur open dan schuifdeur dicht
   if (fase > 3 && !doordone && DIOs[2] == 0 && DIOs[11] == 0) {
@@ -250,13 +316,13 @@ void loop() {
 
     digitalWrite(motorschuif, HIGH);
     delay(1000);
-    digitalWrite(motorschuif, LOW);
+    digit alWrite(motorschuif, LOW);
     Serial.println("Schuifdeur is dicht.");
     //delay(5000);
     doordone = 1;
 
   }
-
+*/
   //meterkast staat los van fases
   if (DIOs[1] == 1) { //meterkast is omgezet
     //Serial.println("Meterkast is omgezet.");
@@ -272,14 +338,14 @@ void loop() {
     digitalWrite(LED, LOW);
     //Serial.println("Het licht is aangegaan.");
   }
-  //fase 1
+  /*//fase 1
   if (fase == 0 &&  DIOch[0] == 1) { //Deurtje is geopend
     Serial.println("Deurtje is geopend.");
     fase = 1;
     tfase[0] = millis() / 1000;
     DIOch[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17] = 0;
     //kleefschuif uit
-    digitalWrite(kleefschuif, LOW);
+    //digitalWrite(kleefschuif, LOW); //kaya: de deur gaat niet meer zomaar open in fase 1
     Serial.println("Kleefmagneet schuifdeur is uit.");
     delay(1000);
 
@@ -291,7 +357,7 @@ void loop() {
     fase = 2;
     tfase[0] = millis() / 1000;
 
-    /* Kaya: Dit alarm moet niet meer af gaan op dit moment
+    // Kaya: Dit alarm moet niet meer af gaan op dit moment
     //Alarm licht en geluid gaat aan na 5 seconde
     delay(5000);
     digitalWrite(alarmlicht, HIGH);
@@ -299,9 +365,10 @@ void loop() {
     Serial.println("Alarm is aan.");
     DIOch[3] = 0;
     DIObf[3] = 0;
-    */
+    
   }
-
+*/
+/*
   //fase 3
   if (fase == 2 &&  DIOch[3] == 1) { //alarmcode is ingetypt
     Serial.println("Alarmcode is correct ingevoerd.");
@@ -322,7 +389,8 @@ void loop() {
     DIOch[4] = 0;
     DIObf[4] = 0;
   }
-
+  */
+/*
   //fase 4
   if (fase == 3 &&  DIOch[4] == 1) { //telefoon wordt opgenomen
     Serial.println("Telefoon is opgenomen.");
@@ -344,7 +412,8 @@ void loop() {
     DIOch[7] = 0;
     DIObf[7] = 0;
   }
-
+  */
+/*
   //fase 5
    if (fase==4 &&  DIOch[10]==1){ //ze hebben de lasers aan
      Serial.println("Ze hebben de lasers aan.");
@@ -353,7 +422,8 @@ void loop() {
   //
 
    }
-
+*/
+/*
   //fase 6
   if (fase == 5 &&  DIOch[5] == 1) { //de balie deur is geopend
     Serial.println("De baliedeur is geopend.");
@@ -364,8 +434,8 @@ void loop() {
     digitalWrite(kleefluik, LOW);
     Serial.println("De magneet van het luik is uit.");
 
-  }
-
+  }*/
+/*
   //fase 7
   if ((fase == 6 || fase == 4)&&  DIOch[7] == 1) { //het luik is geopend
     Serial.println("Het luik is geopend.");
@@ -380,10 +450,10 @@ void loop() {
     Serial.println("De rookmachine en stroboscoop zijn afgegaan.");
 
   }
-
+*/
   // Kaya: dit zijn vermoedelijk de knoppen die nu in de schacht zitten
   //fase 8
-  if (fase == 7 &&  DIOs[8] == 1 ) { //&& DIOs[9]==1 && DIOs[10]==1 && DIOs[11]==1 && DIOs[12]==1 && DIOs[13]==1){ //alle twisterknoppen zijn ingedrukt
+  if (DIOs[8] == 1 ) { //&& DIOs[9]==1 && DIOs[10]==1 && DIOs[11]==1 && DIOs[12]==1 && DIOs[13]==1){ //alle twisterknoppen zijn ingedrukt
     Serial.println("Alle twisterknoppen zijn ingedrukt.");
     fase = 10;
     tfase[7] = millis() / 1000;
@@ -436,14 +506,14 @@ void loop() {
      digitalWrite(kleefkluis2, LOW);
 
     }*/
-
+/*
   //fase 11
   if (fase == 10 &&  DIOch[16] == 1) { //De laatste deur is open.
     Serial.println("De laatste deur is open.");
     tfase[11] = millis() / 1000;
     fase++;
   }
-
+*/
 
 
 
